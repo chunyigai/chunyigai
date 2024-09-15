@@ -1,11 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Sample Website</title>
-  </head>
-  <body>
-    <h1>This is my sample website</h1>
-  </body>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professor's Personal Homepage">
+    <title>Professor Chunyi's Homepage</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        header {
+            background-color: #4CAF50;
+            color: white;
+            padding: 20px 0;
+            text-align: center;
+        }
+        header h1 {
+            margin: 0;
+            font-size: 2.5em;
+        }
+        .container {
+            width: 90%;
+            margin: 0 auto;
+            max-width: 1000px;
+        }
+        .profile {
+            text-align: center;
+            padding: 20px;
+        }
+        .profile img {
+            border-radius: 50%;
+            max-width: 150px;
+            height: auto;
+        }
+        .contact-info, .publications {
+            background-color: white;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        .contact-info h2, .publications h2 {
+            color: #4CAF50;
+        }
+        .publications a {
+            color: #4CAF50;
+            text-decoration: none;
+        }
+        .publications a:hover {
+            text-decoration: underline;
+        }
+        footer {
+            background-color: #333;
+            color: white;
+            text-align: center;
+            padding: 10px 0;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1> University of Northern British Columbia</h1>
+    </header>
+
+    <div class="container">
+        <section class="profile">
+            <img src="https://www.dropbox.com/s/ah3t55gweq296bx/laop.jpg?raw=1" alt="Professor Chunyi's Profile Photo">
+            <h2>Chunyi Gai, Ph.D.</h2>
+            <p>Assistant Professor, Department of Mathematics and Statistics</p>
+        </section>
+
+        <section class="contact-info">
+            <h2>Contact Information</h2>
+            <p>Email: <a href="mailto:chunyi.gai@unbc.ca">chunyi.gai@unbc.ca</a></p>
+            <p>Campus: University of Northern British Columbia
+            </p>
+        </section>
+
+        <section class="publications">
+            <h2>Publications</h2>
+            <p><a href="https://www.mathstat.dal.ca/~tkolokol/papers/sir-chaos.pdf" target="_blank">View my Publications</a></p>
+        </section>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Professor Chunyi Gai. All Rights Reserved.</p>
+    </footer>
+</body>
 </html>
