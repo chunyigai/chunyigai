@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Professor's Personal Homepage">
-    <title>Professor Chunyi's Homepage</title>
+    <meta name="description" content="Official homepage of Dr. Chunyi Gai, Assistant Professor at the University of Northern British Columbia.">
+    <title>Chunyi's Homepage</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -12,11 +12,12 @@
             padding: 0;
             background-color: #f4f4f4;
             color: #333;
+            line-height: 1.6;
         }
         header {
-            background-color: #4CAF50;
+            background-color: #055C4C; /* Changed to the new green color */
             color: white;
-            padding: 20px 0;
+            padding: 15px 0;
             text-align: center;
         }
         header h1 {
@@ -25,73 +26,126 @@
         }
         .container {
             width: 90%;
-            margin: 0 auto;
+            margin: 20px auto;
             max-width: 1000px;
-        }
-        .profile {
-            text-align: center;
             padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
-        .profile img {
-            border-radius: 50%;
-            max-width: 150px;
+        .profile-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: flex-start;
+        }
+        .profile-details {
+            flex: 1;
+            max-width: 60%;
+        }
+        .profile-name {
+            font-size: 2em;
+            font-weight: bold;
+        }
+        .profile-photo {
+            flex: 1;
+            max-width: 35%;
+            text-align: right;
+        }
+        .profile-photo img {
+            max-width: 100%;
             height: auto;
-        }
-        .contact-info, .publications {
-            background-color: white;
-            margin: 20px 0;
-            padding: 20px;
             border-radius: 8px;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
-        .contact-info h2, .publications h2 {
-            color: #4CAF50;
+        section {
+            margin: 20px 0;
         }
-        .publications a {
-            color: #4CAF50;
+        h2 {
+            color: #055C4C; /* Changed heading color to match the new green */
+            border-bottom: 2px solid #055C4C; /* Updated border color */
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+        }
+        a {
+            color: #1E90FF; /* Light blue color for all hyperlinks */
             text-decoration: none;
         }
-        .publications a:hover {
+        a:hover {
             text-decoration: underline;
+            color: #0056b3; /* Darker blue on hover */
         }
-        footer {
-            background-color: #333;
-            color: white;
-            text-align: center;
-            padding: 10px 0;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+        ul {
+            padding-left: 20px;
+        }
+        @media (max-width: 768px) {
+            .profile-container {
+                flex-direction: column;
+            }
+            .profile-photo {
+                text-align: center;
+                margin-bottom: 20px;
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1> University of Northern British Columbia</h1>
+        <h1>Chunyi's Homepage</h1>
     </header>
 
     <div class="container">
-        <section class="profile">
-            <img src="https://www.dropbox.com/s/ah3t55gweq296bx/laop.jpg?raw=1" alt="Professor Chunyi's Profile Photo">
-            <h2>Chunyi Gai, Ph.D.</h2>
-            <p>Assistant Professor, Department of Mathematics and Statistics</p>
-        </section>
-
-        <section class="contact-info">
-            <h2>Contact Information</h2>
-            <p>Email: <a href="mailto:chunyi.gai@unbc.ca">chunyi.gai@unbc.ca</a></p>
-            <p>Campus: University of Northern British Columbia
-            </p>
-        </section>
+        <div class="profile-container">
+            <div class="profile-details">
+                <p class="profile-name">Chunyi Gai</p> 
+                <p>Assistant Professor at the University of Northern British Columbia<br>
+                Department: Mathematics and Statistics<br>
+                Email: <a href="mailto:chunyi.gai@unbc.ca" aria-label="Email Chunyi Gai">chunyi.gai@unbc.ca</a><br>
+                <a href="https://www.dropbox.com/scl/fi/o81pumvfh0makta2qlwuh/CV_Chunyi_2024-Sep.pdf?rlkey=69hvz09fupa9mv0bm88cgbrse&raw=1" target="_blank" aria-label="Download Chunyi Gai's Curriculum Vitae">Curriculum Vitae</a></p>
+                <section>
+                    <h2>About Me</h2>
+                    <p>I was a post-doctoral fellow in the Mathematics Department at the University of British Columbia. I obtained my PhD degree at Dalhousie University in August 2021, under the supervision of <a href="https://www.mathstat.dal.ca/~tkolokol/" target="_blank" aria-label="Visit Theodore Kolokolnikov's page">Theodore Kolokolnikov</a>.</p>
+                </section>
+                <section>
+                    <h2>Research</h2>
+                    <p>My research focuses on dynamical systems and mathematical modeling, with an emphasis on pattern formation in reaction-diffusion systems using asymptotic and singular perturbation techniques.</p>
+                </section>
+            </div>
+            <div class="profile-photo">
+                <img src="https://www.dropbox.com/scl/fi/vq9540b1gcgxjgoew9a8e/me2.jpg?rlkey=fa53255ol23sfr1ynb4ecousn&raw=1" alt="Photo of Chunyi Gai" aria-label="Chunyi Gai's profile photo">
+            </div>
+        </div>
 
         <section class="publications">
             <h2>Publications</h2>
-            <p><a href="https://www.mathstat.dal.ca/~tkolokol/papers/sir-chaos.pdf" target="_blank">View my Publications</a></p>
+            <ul>
+                <li><a href="https://www.dropbox.com/scl/fi/d3kgee8463ubzgra4nl11/recurrent-and-chaotic-outbreaks-in-sir-model-div.pdf?rlkey=srgtwapwdlshinnkdjzutzati&raw=1" target="_blank" aria-label="Recurrent and Chaotic Outbreaks in SIR Model">Recurrent and Chaotic Outbreaks in SIR Model</a>, Chunyi Gai, Theodore Kolokolnikov, Jan Schrader, Vedant Sharma. (European Journal of Applied Mathematics)</li>
+                <li><a href="https://www.dropbox.com/scl/fi/tgivukgtbuzjv9j1m8phj/police.pdf?rlkey=md3o5s84kj1nkuive9lndvrrq&raw=1" target="_blank" aria-label="The Nucleation-Annihilation Behavior for Hotspot Patterns of Urban Crime with Police Deployment">The Nucleation-Annihilation Behavior for Hotspot Patterns of Urban Crime with Police Deployment</a>, Chunyi Gai, Michael Ward. (SIADS)</li>
+                <li><a href="https://www.dropbox.com/scl/fi/mfrc7frtyhmg7pf6bde3j/BZ.pdf?rlkey=jsa17vg1riqj2m3pdrxhwdegy&raw=1" target="_blank" aria-label="Localized Pattern Formation: Semi-strong Interaction Asymptotic Analysis for Three Components Model">Localized Pattern Formation: Semi-strong Interaction Asymptotic Analysis for Three Components Model</a>, Fahad Al Saadi, Chunyi Gai, Mark Nelson. (submitted to Proceedings of the Royal Society A)</li>
+                <li><a href="https://www.dropbox.com/scl/fi/340ry6i1c4fva86m8p1rn/draft_veggies-comp.pdf?rlkey=3i9xw015bbv024qt7p3cx7fs9&raw=1" target="_blank" aria-label="Resource-mediated Competition between Two Plant Species with Different Rates of Water Intake">Resource-mediated Competition between Two Plant Species with Different Rates of Water Intake</a>, Chunyi Gai, Theodore Kolokolnikov. (SIAM Journal on Applied Mathematics (SIAP), 2023)</li>
+                <li><a href="https://www.dropbox.com/scl/fi/q4o1oko1xguwxbg72tufz/novel_sch.pdf?rlkey=rhvehtp6t5w16szgmur6s2704&raw=1" target="_blank" aria-label="Spikes and Localized Patterns for a Novel Schnakenberg Model">Spikes and Localized Patterns for a Novel Schnakenberg Model in the Semi-strong Interaction Regime</a>, Fahad Alsaadi, Alan Champneys, Chunyi Gai, Theodore Kolokolnikov. (European Journal of Applied Mathematics, 2022)</li>
+                <li><a href="https://www.dropbox.com/scl/fi/3zzgxkbfothywmjyua1kl/gmnoise.pdf?rlkey=7x20lv166abx9ckoohjs0d9y4&raw=1" target="_blank" aria-label="Spike Dynamics in the Presence of Noise">Spike Dynamics in the Presence of Noise</a>, Chunyi Gai, Theodore Kolokolnikov, David Iron, John Rumsey. (SIAM Journal on Applied Dynamical Systems (SIADS), 2020)</li>
+                <li><a href="https://www.dropbox.com/scl/fi/bza7dk252e2hzu07hgr53/sir.pdf?rlkey=4yu77rzqdv947bpeebin2nb1k&raw=1" target="_blank" aria-label="Localized Outbreaks in SIR Model with Diffusion">Localized Outbreaks in SIR Model with Diffusion</a>, Chunyi Gai, David Iron, Theodore Kolokolnikov. (Journal of Mathematical Biology, 2020)</li>
+                <li><a href="https://www.dropbox.com/scl/fi/3311oj2nfxtazj8dxkf3y/vege_noise.pdf?rlkey=x2hk99yafpo1ek9v8oacruprh&raw=1" target="_blank" aria-label="Patterned Vegetation, Tipping Points, and the Rate of Climate Change">Patterned Vegetation, Tipping Points, and the Rate of Climate Change</a>, Yuxin Chen, Theodore Kolokolnikov, Justin Tzou, Chunyi Gai. (European Journal of Applied Mathematics, 2015)</li>
+                <li><a href="https://www.dropbox.com/scl/fi/rr7ed202b4fb3nzm4qgxf/keller_segel.pdf?rlkey=597ih09wvijmzdstuy7iaxamm&raw=1" target="_blank" aria-label="Qualitative Analysis of Stationary Keller-Segel Chemotaxis Models with Logistic Growth">Qualitative Analysis of Stationary Keller-Segel Chemotaxis Models with Logistic Growth</a>, Qi Wang, Jingda Yan, Chunyi Gai. (Zeitschrift für angewandte Mathematik und Physik (ZAMP), 2016)</li>
+                <li><a href="https://www.dropbox.com/scl/fi/ge3m5wrcmmloa3qbhna1x/lotka_volterra.pdf?rlkey=mgv39n5f4afzysgj69m47xrsu&raw=1" target="_blank" aria-label="Qualitative Analysis of a Lotka-Volterra Competition System with Advection">Qualitative Analysis of a Lotka-Volterra Competition System with Advection</a>, Chunyi Gai, Qi Wang, Jingda Yan. (Discrete Contin. Dyn. Syst., 2015)</li>
+            </ul>
+        </section>
+
+        <section class="teaching">
+            <h2>Teaching</h2>
+            <p><strong>At UBC:</strong></p>
+            <ul>
+                <li>MATH 307 Applied Linear Algebra (2021-2022 Winter Term 1)</li>
+                <li>MATH 221 Matrix Algebra (2022 Summer Term 1)</li>
+                <li>MATH 307 Applied Linear Algebra (2022-2024 Winter Term 1)</li>
+                <li>MATH 101 Integral Calculus with Applications (2024 Winter Term 2)</li>
+            </ul>
+
+            <p><strong>At Dalhousie:</strong></p>
+            <ul>
+                <li>MATH 2120 Method for ODEs (2018-2021 Summers)</li>
+            </ul>
         </section>
     </div>
-
-    <footer>
-        <p>&copy; 2024 Professor Chunyi Gai. All Rights Reserved.</p>
-    </footer>
 </body>
 </html>
